@@ -28,11 +28,14 @@ exports.RMSDMSPage = class RMSDMSPage {
     }
     
     async getStarted() {
+        /* some smoke testing  on set up */ 
            await expect(this.navLoggedInUser).toBeVisible();
            await expect(this.navHomeLink).toBeVisible();
+           await expect(this.pageTitle).toBeVisible();
+           await expect(this.csoImage).toBeVisible();
       }
     async pageObjectModel() {
         await this.getStarted();
-        await this.navLoggedInUser.click();
+        await this.boxCSOIdentifier.click();
     }
 }

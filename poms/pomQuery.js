@@ -4,7 +4,7 @@ exports.QueryPom = class QueryPom {
 
     constructor (page) {
         this.page=page;
-        this.fieldCSOIdentifier = page.getByRole('textbox', { name: 'Enter a CSO Identifier..' });
+        this.boxCSOIdentifier = page.locator('#enterpriseNumber');
         this.btnEnterpriseSearch = page.getByRole('button', { name: 'Search' });
         this.btnOK = page.getByRole('button', { name: 'Ok' });
         this.btnQueryManagement = page.getByRole('link', { name: 'Query Management' });
@@ -26,16 +26,20 @@ exports.QueryPom = class QueryPom {
 
         this.slctrUnitType = page.locator('#unit_type');
         this.slctrLoggedBy = page.getByLabel('Logged By:', { exact: true });
-        this slctrAssignTo = page.getByLabel('Assign To:');
+        this.slctrAssignTo = page.getByLabel('Assign To:');
         
         this.rangeDateRng = page.locator('#slider-range div');
     }
 
+    async goto() {
+        await this.page.goto('https://uat-webserver.cso.ie/RMS/client/');
+    }
     async getStarted() {
-        await expect(this.navLoggedInUser).toBeVisible();
-        await expect(this.navHomeLink).toBeVisible();
-   }
- async pageObjectModel() {
-     await this.navLoggedInUser.click();
- }
+        await expect(this.boxCSOIdentifier).toBeVisible();
+
+    }    
+    async pageObjectModel() {
+        await this.getStarted();
+        await this.boxCSOIdentifier.click();
+    }
 }
