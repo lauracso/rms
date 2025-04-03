@@ -14,9 +14,18 @@ exports.SurveyMaintenance = class SurveyMaintenance {
         this.tblHdngSurveyText = page.getByRole('button', {name: 'Survey Text'} );
         this.tblHeadingSurveyDescription = page.getByRole('button' , {name: 'Survey Description'});
         this.tblSurveyCode = page.getByRole('button', {name: 'Survey Code'});
-        this.tblSurveyStatus = page.getByRole('button', { name: 'Status'});
-        this.buttonStatus = page.getByRole('badge')
+        this.tblSurveyStatus =  page.getByRole('row', { name: '6007 Access To Finance Access' }).locator('span');
+        this.viewOption = page.locator('#view-survey-maintenance-details').click();
 
+        //this.buttonStatus = page.getByRole('badge')
+    }
 
+    async getStarted() {
+        await expect(this.navLoggedInUser).toBeVisible();
+        await expect(this.navHomeLink).toBeVisible();
+   }
+
+    async pageObjectModel() {
+         await this.navLoggedInUser.click();
     }
 }
