@@ -1,0 +1,26 @@
+{
+  "name": "rmsfordms",
+  "version": "1.0.0",
+  "main": "rms-setup.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauracso/rms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauracso/rms/issues"
+  },
+  "homepage": "https://github.com/lauracso/rms#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "path": "^0.12.7"
+  }
+}

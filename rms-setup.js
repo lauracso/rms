@@ -5,7 +5,6 @@ const email = 'laura.egar@gmail.com';
 const pass = "Ili16ctmfrci!$";
 
 setup('authenticate', async ({ page}) => {
-
     await page.goto('https://login.microsoftonline.com');
     await expect(page).toHaveTitle(/Sign in to your account/);
     await page.getByRole('textbox', { name: 'Enter your email, phone, or' }).click();

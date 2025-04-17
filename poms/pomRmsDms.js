@@ -27,8 +27,7 @@ exports.RMSDMSPage = class RMSDMSPage {
         await this.page.goto('https://uat-webserver.cso.ie/RMS/client/');
     }
     
-    async getStarted() {
-        /* some smoke testing  on set up */ 
+    async getStarted() { 
            await expect(this.navLoggedInUser).toBeVisible();
            await expect(this.navHomeLink).toBeVisible();
            await expect(this.pageTitle).toBeVisible();

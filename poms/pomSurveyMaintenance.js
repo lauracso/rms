@@ -9,20 +9,22 @@ exports.SurveyMaintenance = class SurveyMaintenance {
         this.page = page;
         this.buttonAddSurvey = page.getByRole('button', { name:' Add Survey to RMS '});
         this.boxSearchBox = page.locator('#dt-search-0');
-        this.drpdwnEntries = page.locator('#dt-length-0');\
+        this.drpdwnEntries = page.locator('#dt-length-0');
         this.tblHdngDMSSurveyId = page.getByRole('button', {name: 'DMS Survey ID'});
         this.tblHdngSurveyText = page.getByRole('button', {name: 'Survey Text'} );
         this.tblHeadingSurveyDescription = page.getByRole('button' , {name: 'Survey Description'});
         this.tblSurveyCode = page.getByRole('button', {name: 'Survey Code'});
         this.tblSurveyStatus =  page.getByRole('row', { name: '6007 Access To Finance Access' }).locator('span');
         this.viewOption = page.locator('#view-survey-maintenance-details').click();
+    }
 
-        //this.buttonStatus = page.getByRole('badge')
+    async goto() {
+        await this.page.goto('https://uat-webserver.cso.ie/RMS/client/');
     }
 
     async getStarted() {
-        await expect(this.navLoggedInUser).toBeVisible();
-        await expect(this.navHomeLink).toBeVisible();
+        await expect(this.page.locator(navLoggedInUser)).toBeVisible();
+        await expect(this.page.locator(navHomeLink)).toBeVisible();
    }
 
     async pageObjectModel() {
