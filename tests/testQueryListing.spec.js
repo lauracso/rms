@@ -17,3 +17,22 @@ test('check aer lingus survey filters exist', async ({page }) => {
     await expect(queryListingPage.bcNext).toBeVisible();
 
 });
+
+test('check view buttons appear when monthly services inquiry is clicked ', async ({page}) => {
+    const queryListingPage = new QueryListingPom(page);
+    await queryListingPage.goto();
+    await queryListingPage.getStarted();
+    await queryListingPage.pageObjectModel();
+
+    await expect(queryListingPage.monthlyServicesInquiry).toBeVisible();
+    await queryListingPage.monthlyServicesInquiry.click();
+
+});
+
+test('test query interaction', async ({ page }) => {
+    const queryListingPage = new QueryListingPom(page);
+    await queryListingPage.goto();
+    await queryListingPage.getStarted();
+    await queryListingPage.pageObjectModel();
+
+});
