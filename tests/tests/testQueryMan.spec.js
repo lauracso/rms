@@ -1,6 +1,6 @@
 import { defineConfig, test, expect } from '@playwright/test';
 
-import { QueryPom } from '../poms/pomQuery'; 
+import { QueryPom } from '../../poms/pomQuery'; 
 
 test('retrieve aer lingus', async({page}) => { 
     const qp =  new QueryPom(page);

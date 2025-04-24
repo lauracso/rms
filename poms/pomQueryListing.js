@@ -25,6 +25,7 @@ exports.QueryListingPom = class QueryListingPom {
         this.sorterSurveyPeriod = page.getByRole('cell', { name: 'Survey Period: Activate to' }).locator('span').nth(1);
         this.sorterIssueDate = page.getByRole('cell', { name: 'Issue Date: Activate to sort' }).locator('span').nth(1);
         this.sorterReceivedDate =  page.getByRole('cell', { name: 'Received Date: Activate to' }).locator('span').nth(1);
+        this.monthlyServicesInquiry = page.getByRole('row', { name: ' Monthly Services Inquiry' }).locator('i');
     }
 
     async goto() {
