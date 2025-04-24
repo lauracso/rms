@@ -6,4 +6,5 @@ node_modules/
 /playwright/.cache/
 .env
 *.png
-rms-setup.js
+rms.setup.js
+

@@ -1,6 +1,6 @@
 
-import { test, expect } from '@playwright/test';
-import  { RMSDMSPage } from '../../poms/pomRmsDms';
+import { defineConfig, test, expect } from '@playwright/test';
+import  { RMSDMSPage } from '../poms/pomRmsDms';
 
 test('RMS for DMS page should contain certain navigation elements', async ({ page }) => {
   const pomPage = new RMSDMSPage(page);

@@ -1,5 +1,5 @@
 import { defineConfig, test, expect } from '@playwright/test';
-import { QueryListingPom } from '../../poms/pomQueryListing';
+import { QueryListingPom } from '../poms/pomQueryListing';
 
 test('check aer lingus survey filters exist', async ({page }) => {
     const queryListingPage = new QueryListingPom(page);

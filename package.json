@@ -1,5 +1,5 @@
 {
-  "name": "rmsfordms",
+  "name": "rms",
   "version": "1.0.0",
   "main": "rms-setup.js",
   "scripts": {},
@@ -16,7 +16,7 @@
   "homepage": "https://github.com/lauracso/rms#readme",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.51.1",
+    "@playwright/test": "^1.52.0",
     "@types/node": "^22.14.1"
   },
   "dependencies": {

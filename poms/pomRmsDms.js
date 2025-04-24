@@ -1,5 +1,5 @@
 // a file to create a page object model for RMS for DMS
-import { test, expect } from '@playwright/test';
+import { defineConfig, test, expect } from '@playwright/test';
 
 exports.RMSDMSPage = class RMSDMSPage {
     /*

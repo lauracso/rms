@@ -1,5 +1,5 @@
 // @ts-check
-import { test, expect } from '@playwright/test';
+import { defineConfig, test, expect } from '@playwright/test';
 
 test('rms for dms', async({page}) => { 
     await page.goto('https://uat-webserver.cso.ie/RMS/client/');
