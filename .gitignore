@@ -7,4 +7,5 @@ node_modules/
 .env
 *.png
 rms.setup.js
-
+package-lock.json
+package.json
