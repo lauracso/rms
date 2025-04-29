@@ -9,3 +9,4 @@ node_modules/
 rms.setup.js
 package-lock.json
 package.json
+.auth/user.json
