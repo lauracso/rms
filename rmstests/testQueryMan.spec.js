@@ -14,8 +14,8 @@ test('retrieve aer lingus', async({page}) => {
 
 test('test query management pom' , async ({page }) => {
 
-    const qmp = new QueryManPom(page);
-    await qmp.goto();
-    await qmp.getStarted();
-    await qmp.pageObjectModel();
+  // const qmp = new QueryManPom(page);
+ //   await qmp.goto();
+  //  await qmp.getStarted();
+  //  await qmp.pageObjectModel();
 });

@@ -1,5 +1,5 @@
 /* a POM for what should appear when the survey maintenance of RMS for DMS is pressed */
-import { test, expect } from '@playwright/test';
+import { defaultConfig, test, expect } from '@playwright/test';
 
 exports.SurveyMaintenance = class SurveyMaintenance {
     /*

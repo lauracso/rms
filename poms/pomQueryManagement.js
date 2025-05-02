@@ -42,7 +42,7 @@ async getStarted() {
 
     //find all the elements you would expect in the query management page  after the query management button is clicked.
 
-    this.btnQueryManagement.click();
+    this.page.btnQueryManagement.click();
 
     await expect(this.boxCSOIdentifier).toBeVisible();
     await expect(this.btnQueryManagement).toBeVisible();

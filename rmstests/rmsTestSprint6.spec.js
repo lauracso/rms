@@ -1,8 +1,11 @@
+
+
+
 import { defineConfig, test, expect } from '@playwright/test';
-import { QueryManPom } from '../poms/pomQueryManagement';
 
 test('query interaction add comment', async ({ page }) => {
-  await page.goto('https://uat-webserver.cso.ie/RMS/client/');
+  await page.goto('https://uat-webserver.cso.ie/RMS/client');
+  expect(page).toHaveURL('https://uat-webserver.cso.ie/RMS/client');
   await page.getByRole('link', { name: 'Query Management' }).click();
   await page.getByRole('checkbox', { name: 'Queries Logged by me' }).check();
 
@@ -135,3 +138,11 @@ test('query view and add some text ', async ({ page }) => {
     await page.getByRole('button', { name: ' Confirm' }).click();
     await page.getByRole('button', { name: 'Ok' }).click();
   });
+
+  //to finish
+  test('check the checkboxes are not selected' , async ({page}) => {
+    await page.goto('https://uat-webserver.cso.ie/RMS/client');
+
+  });
+
+ 
