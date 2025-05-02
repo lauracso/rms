@@ -11,7 +11,7 @@ exports.QueryManPom = class QueryManPom {
         this.dropdownEntriesPerPage = page.getByLabel('entries per page');
         this.lblLoggedQueries = page.getByText('Queries Logged by me');
         this.chkBoxLoggedQueries = page.getByRole('checkbox', { name: 'Queries Logged by me' });
-        this.lblAssignedQueries = page.getByText('Queries Assign to me'));
+        this.lblAssignedQueries = page.getByText('Queries Assign to me');
         this.chkBoxAssignedQueries = page.getByRole('checkbox', { name: 'Queries Assign to me' });
         this.lblSurvery = page.getByText('Survey:');
         this.lblStatus = page.getByText('Status:');
@@ -29,17 +29,20 @@ exports.QueryManPom = class QueryManPom {
         this.counterEntriesPerPage = page.getByText('entries per page');
         this.lblEntriesPerPage = page.locator('#query-namagement-table_wrapper');
         this.dropdownMonthlySurveys = page.getByLabel('Survey:', { exact: true });
-        this.optionsSurvey = page.getByLabel('Survey:', { exact: true }).selectOption('Monthly Services Inquiry');
+       // this.optionsSurvey = page.getByLabel('Survey:', { exact: true }).selectOption('Monthly Services Inquiry');
         this.breadcrumbEntriesPerPage = page.getByText('entries per page');
 
 }
 
 async goto() {
     await this.page.goto('https://uat-webserver.cso.ie/RMS/client/');
+    await this.btnQueryManagement.click();
 }
 async getStarted() {
 
     //find all the elements you would expect in the query management page  after the query management button is clicked.
+
+    this.btnQueryManagement.click();
 
     await expect(this.boxCSOIdentifier).toBeVisible();
     await expect(this.btnQueryManagement).toBeVisible();
