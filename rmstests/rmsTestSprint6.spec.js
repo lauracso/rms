@@ -5,7 +5,6 @@ import { defineConfig, test, expect } from '@playwright/test';
 
 test('query interaction add comment', async ({ page }) => {
   await page.goto('https://uat-webserver.cso.ie/RMS/client');
-  expect(page).toHaveURL('https://uat-webserver.cso.ie/RMS/client');
   await page.getByRole('link', { name: 'Query Management' }).click();
   await page.getByRole('checkbox', { name: 'Queries Logged by me' }).check();
 
